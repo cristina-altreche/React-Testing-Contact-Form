@@ -32,11 +32,11 @@ test("Adds a new user on Submit", async () => {
     fireEvent.click(submitBtn);
   });
 
-  //assert 
+  //assert
   expect(error).not.toBeInTheDocument();
 
-//   const newUser = await screen.findByTestId("newUser");
-// 	expect(newUser).toBeInTheDocument();
+  const newUser = await screen.findByTestId("newUser");
+  expect(newUser).toBeVisible();
 });
 
 test("Runs validation", () => {
